@@ -6,11 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js"></script>
+
 </head>
 
 <body>
-    <div id="dictionaryWords"></div>
+    <h1>Task 1:</h1>
+    <p> Dictionary words:<span id="dictionaryWords"> </span></p>
+    <form id="addWord">
+        <input id="addInput" type="text" placeholder="Add word..." />
+        <button type="submit">Add</button>
+    </form>
+
+    <h1>Task 2:</h1>
+    <span>Select your text:</span>
+
+    <input id="task2Input" list="task2" />
+
+    <datalist id="task2">
+
+    </datalist>
+
+
+    <script src="Node.js"></script>
+    <script src="Trie.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
