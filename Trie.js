@@ -1,6 +1,6 @@
 class Trie {
     constructor() {
-        this.root = new Node("", null)
+        this.root = new Node("")
     }
 
     //task1
@@ -12,7 +12,7 @@ class Trie {
 
             //check if currentNode has got given letter in children collection
             if (currentNode.children[letter] === undefined) {
-                currentNode.children[letter] = new Node(letter, this)
+                currentNode.children[letter] = new Node(letter)
             }
             currentNode = currentNode.children[letter]
         }
@@ -41,7 +41,6 @@ class Trie {
         }
         //traverse through children nodes
         else {
-            //debugger
             //iterate through sub-trie keys
             for (let node in currentNode.children) {
                 //pass into function sub-trie values
@@ -51,7 +50,7 @@ class Trie {
         //we may expect at max 2-dimension table, so we flat it
         const matchingWords = (words.flat(2)).map(word => userInput + word)
         //we check if userInput equals word in trie
-        if (currentNode.endOfAWord) matchingWords.push(currentNode.letter)
+        if (currentNode.endOfAWord) matchingWords.push(userInput)
         return matchingWords
 
     }

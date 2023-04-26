@@ -3,6 +3,5 @@ class Node {
         this.letter = letter
         this.endOfAWord = false
         this.children = {}
-        this.parent = parent
     }
 }
