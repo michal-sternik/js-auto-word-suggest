@@ -5,7 +5,7 @@ class Trie {
 
     //task1
     add(word) {
-        const letterTable = splitWordIntoLetters(word)
+        const letterTable = splitWordIntoLetters(word.toLowerCase())
         let currentNode = this.root
 
         for (let letter of letterTable) {

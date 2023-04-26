@@ -52,7 +52,7 @@ let trieWords = []
 
 const trie = new Trie()
 for (item of taskDictionary) {
-    trie.add(item)
+    trie.add(item.toLowerCase())
 }
 
 const dictionaryWords = document.querySelector("#dictionaryWords")
